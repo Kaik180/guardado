@@ -20,6 +20,13 @@ public class FUNCION2 {
          return fraseM;
 
     }
+
+    /**
+     * @author Kevin
+     * @version 1.0
+     * metodo para contar las vocales dentro de una frase
+     * @return devuelve la cantidad de vocales contadas
+     */
     public static int metodo2 (String frase){
         int a = 0;
         int e = 0;

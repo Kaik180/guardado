@@ -11,6 +11,7 @@ public class BATERIAFUNCIONES {
        System.out.println("el cubo del numero que me has pasado es: ");
        //como pintar X numero de nombres
         PINTAR_NOMBRE("patri","kevin");
+        parImpar(numero);
 
     }
     public static int PEDIRNUMERO( ){
@@ -31,6 +32,15 @@ public class BATERIAFUNCIONES {
     public  static  void PINTAR_NOMBRE(String... nombre){
         for (String nom : nombre){
             System.out.println(nom);
+        }
+
+    }
+    public static boolean parImpar(int numero) {
+
+        if (numero % 2 == 0) {
+        return true;
+        }else{
+        return false;
         }
 
     }

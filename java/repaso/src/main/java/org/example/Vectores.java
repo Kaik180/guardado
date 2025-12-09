@@ -18,7 +18,7 @@ public class Vectores {
         }
 
         // 3. Mostramos el contenido del vector
-        System.out.println("\nContenido del vector:");
+        System.out.println("Contenido del vector:");
         for (int i = 0; i < numeros.length; i++) {
             System.out.println("Posición " + i + ": " + numeros[i]);
         }
