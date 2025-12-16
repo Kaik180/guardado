@@ -10,23 +10,22 @@ class bonitoTest {
 
     @Test
     void testCrearVector() {
-        int[] vector = bonito.crearVector(5);
-        assertArrayEquals(new int[]{1, 2, 3, 4, 5}, vector);
+        int[] vector = bonito.crearVector(5); //  crear vector de 5
+        assertArrayEquals(new int[]{1, 2, 3, 4, 5}, vector); // que salga el vector de 5 bien
     }
 
     @Test
     void testEliminarCadaPaso() {
-        int[] vector = {1, 2, 3, 4, 5, 6};
-        int[] resultado = bonito.eliminarCadaPaso(vector, 2);
-        // debería eliminar cada 2º elemento por posición → quedan {1, 3, 5}
-        assertArrayEquals(new int[]{1, 3, 5}, resultado);
+        int[] vector = {1, 2, 3, 4, 5, 6}; //creamos el vector que vamos a pasar
+        int[] resultado = bonito.eliminarCadaPaso(vector, 2); //le pasamos el vector y los pasos
+        assertArrayEquals(new int[]{1, 3, 5}, resultado); //deberia salir asi elvector anterior
     }
 
     @Test
     void testCompactar() {
-        int[] vector = {1, 2, 3, 0, 0};
-        int[] resultado = bonito.compactar(vector, 3);
-        assertArrayEquals(new int[]{1, 2, 3}, resultado);
+        int[] vector = {1, 2, 3, 0, 0}; //le pasamos  un vector con 0
+        int[] resultado = bonito.compactar(vector, 3); //le pasamos el vector con el contador en 3
+        assertArrayEquals(new int[]{1, 2, 3}, resultado); //comprobamos que salga bien
     }
 
     @Test
