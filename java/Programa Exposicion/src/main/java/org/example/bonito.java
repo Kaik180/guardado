@@ -48,7 +48,6 @@ public class bonito {
             try {
                 numero = Integer.parseInt(linea);
                 if (numero == 0) { //si es cero nos da igual porque el 0 es cerrar el programa
-
                     break;
                 } else if (numero < 1 || numero > 10000) { //queremos que sea el numero de este rango de numeros
                     System.out.println("Número fuera de rango. Debe estar entre 1 y 10000.");
