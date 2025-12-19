@@ -5,18 +5,18 @@ public class prueba {
 
     public static int[] crearVector(int n) {
         int[] vector = new int[n];
-        for (int i = 0; i < n; i++) vector[i] = i + 1;
+        for (int i = 0; i < n; i++){
+            vector[i] = i + 1;
+        }
         return vector;
     }
-
-    // Elimina las posiciones p con p ≡ 1 (mod paso) usando índices 0-based: i % paso == 0
     public static int[] eliminarCadaPaso(int[] vector, int paso) {
         int longitud = vector.length;
         int[] nuevo = new int[longitud];
         int contador = 0;
 
         for (int i = 0; i < longitud; i++) {
-            if (i % paso != 0) {           // mantenemos todo menos índices 0, paso, 2*paso, ...
+            if (i % paso != 0) {
                 nuevo[contador++] = vector[i];
             }
         }
@@ -29,7 +29,6 @@ public class prueba {
         return resultado;
     }
 
-    // Avanza el paso M=2,3,4,... y se detiene cuando los restantes < M
     public static int[] quitarNumeros(int[] vector) {
         int paso = 2;
         while (paso <= vector.length) {
@@ -43,7 +42,9 @@ public class prueba {
         Scanner entrada = new Scanner(System.in);
         while (true) {
             int n = entrada.nextInt();
-            if (n == 0) break;
+            if (n == 0){
+                break;
+            }
 
             int[] vector = crearVector(n);
             int[] resultado = quitarNumeros(vector);
@@ -51,7 +52,6 @@ public class prueba {
             System.out.print(n + ": ");
             for (int i = resultado.length - 1; i >= 0; i--) {
                 System.out.print(resultado[i]);
-                if (i > 0) System.out.print(" ");
             }
             System.out.println();
         }
